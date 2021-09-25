@@ -41,10 +41,10 @@ layout = html.Div([
                     html.P('description needed', className='paragraph'),
                 ],
             ),
-            # picture output
+            # picture link
             dbc.Col(
                 [
-                    html.Img(src=app.get_asset_url('/data/non_interactive/pointcloud.png'), className='image'),
+                    html.A([html.Img(src=app.get_asset_url('/data/non_interactive/pointcloud.png'), className='image')], href='https://github.com/einelson/Point-cloud-classification-keras'),
                 ],
             ),
         ],style={'margin-top': '4em'},
@@ -60,10 +60,10 @@ layout = html.Div([
                     html.P('description needed', className='paragraph'),
                 ],
             ),
-            # picture output
+            # picture link
             dbc.Col(
                 [
-                    html.Img(src=app.get_asset_url('/data/non_interactive/eeg_eye_state_map.png'), className='image'),
+                    html.A([html.Img(src=app.get_asset_url('/data/non_interactive/eeg_eye_state_map.png'), className='image')], href='https://github.com/einelson/EEG-Eye-State-data-set'),
                 ],
             ),
         ],style={'margin-top': '4em'},
@@ -79,10 +79,10 @@ layout = html.Div([
                     html.P('description needed', className='paragraph'),
                 ],
             ),
-            # picture output
+            # picture link
             dbc.Col(
                 [
-                    html.Img(src=app.get_asset_url('/data/non_interactive/RSAgraph.png'), className='image'),
+                    html.A([html.Img(src=app.get_asset_url('/data/non_interactive/RSAgraph.png'), className='image')], href='https://github.com/einelson/RSA_Encryptor'),
                 ],
             ),
         ],style={'margin-top': '4em'},

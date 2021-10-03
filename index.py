@@ -33,17 +33,6 @@ app.layout = html.Div([
                 label="Projects",
                 nav=True,
             ),
-
-            # external social media links
-            dbc.DropdownMenu(
-                [
-                    dbc.DropdownMenuItem(dbc.NavLink("LinkedIn", active=True, href="https://www.linkedin.com/in/ethan-nelson/")),
-                    dbc.DropdownMenuItem(dbc.NavLink("Github", active=True, href="https://github.com/einelson")),
-                    dbc.DropdownMenuItem(dbc.NavLink("Instructables", active=True, href="https://www.instructables.com/member/enelson8/")),
-                ],
-                label="Social",
-                nav=True,
-            ),
         ],
         className='new-navbar'
     ),

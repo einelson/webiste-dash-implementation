@@ -191,13 +191,15 @@ def make_collage(n, border, rotation):
     if 'b_create_collage' in triggered:
         global images
         # make sure everything is filled out
-        if images == []:
-            return 'Upload some images'
-
-        collage = px.imshow(main(images, border, rotation), title='Image Collage')
-        collage.update_layout(paper_bgcolor = 'rgb(34, 34, 34)', font = {'color': "white", 'family': "Arial"})
-
-        return collage
+        try:
+            collage = px.imshow(main(images, border, rotation), title='Image Collage')
+            collage.update_layout(paper_bgcolor = 'rgb(34, 34, 34)', font = {'color': "white", 'family': "Arial"})
+            return collage
+        except:
+            img = np.arange(100).reshape((10, 10))
+            fig = px.imshow(img, binary_string=True, title='Image Collage')
+            fig.update_layout(paper_bgcolor = 'rgb(34, 34, 34)', font = {'color': "white", 'family': "Arial"})
+            return fig
     else:
         img = np.arange(100).reshape((10, 10))
         fig = px.imshow(img, binary_string=True, title='Image Collage')

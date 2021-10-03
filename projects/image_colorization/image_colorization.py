@@ -47,7 +47,7 @@ layout = html.Div([
             # picture
             dbc.Col(
                 [
-                    html.A([html.Img(src=app.get_asset_url('/data/image_colorization/image_colorization_house.png'), className='image')], href='https://github.com/einelson/Image_colorizer'),
+                    html.A([html.Img(src=app.get_asset_url('/data/image_colorization/frog.png'), className='image')], href='https://github.com/einelson/Image_colorizer'),
                 ],
             ),            
         ],

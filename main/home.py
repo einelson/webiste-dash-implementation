@@ -47,7 +47,7 @@ layout = html.Div([
                     html.P('I went to school at Brigham Young University Idaho (2018-2021) and graduated with a degree in computer science.', className='paragraph'),
                     html.P('My favorite classes were the machine learning and senior project classes.', className='paragraph'),
                     html.P('While I do not currently do machine learning or data visualization for work I continue to work on it in my free time.', className='paragraph'),
-                    html.P('Continuing education is important to me. I am currently studying to take the GRE so I can persue a masters or PhD in machine learning.', className='paragraph'),
+                    html.P('Continuing education is important to me. I am currently studying to take the GRE so I can persue a masters or PhD in data/machine learning.', className='paragraph'),
                 ],
             ),
         ],

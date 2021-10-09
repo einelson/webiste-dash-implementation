@@ -1,5 +1,5 @@
 from dash.resources import Scripts
-from app import app as application
+from app import app
 from dash import dcc, html
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
@@ -11,7 +11,7 @@ from projects.image_colorization import image_colorization
 from projects.fault_detection import fault_detection
 
 
-application.layout = html.Div([
+app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
     html.Div(className='top_row_nav'),
     
@@ -46,9 +46,9 @@ application.layout = html.Div([
             html.P('Check me out on social media and take a look at my projects', className='paragraph', style={'text-align': 'center'}),
             html.Div(
                 [
-                    html.A([html.Img(src=application.get_asset_url('/footer_icons/linkedin.png'), className='footer_image')], href='https://www.linkedin.com/in/ethan-nelson/'),
-                    html.A([html.Img(src=application.get_asset_url('/footer_icons/github.png'), className='footer_image')], href='https://github.com/einelson'),
-                    html.A([html.Img(src=application.get_asset_url('/footer_icons/instructables.png'), className='footer_image')], href='https://www.instructables.com/member/enelson8/'),
+                    html.A([html.Img(src=app.get_asset_url('/footer_icons/linkedin.png'), className='footer_image')], href='https://www.linkedin.com/in/ethan-nelson/'),
+                    html.A([html.Img(src=app.get_asset_url('/footer_icons/github.png'), className='footer_image')], href='https://github.com/einelson'),
+                    html.A([html.Img(src=app.get_asset_url('/footer_icons/instructables.png'), className='footer_image')], href='https://www.instructables.com/member/enelson8/'),
                 ],
                 className='footer_items',
             ),
@@ -61,7 +61,7 @@ application.layout = html.Div([
 ], className='body')
 
 
-@application.callback(Output('page-content', 'children'),
+@app.callback(Output('page-content', 'children'),
               Input('url', 'pathname'))
 def display_page(pathname):
     # main
@@ -83,4 +83,4 @@ def display_page(pathname):
         return not_found.layout
 
 if __name__ == '__main__':
-    application.run(debug=False, port=8000)
+    app.run(debug=False, port=8000)

@@ -88,6 +88,7 @@ layout = html.Div([
                             # settings
                             dbc.CardBody(
                                 [
+                                    html.P('Please upload only one image. Images will be rescaled to 256x256.'),
                                     # upload images
                                     html.P('Upload images', className='input_line'),
                                     html.Div(className='images_list'),

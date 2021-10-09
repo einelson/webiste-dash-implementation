@@ -62,6 +62,7 @@ layout = html.Div([
                             # settings
                             dbc.CardBody(
                                 [
+                                    html.P('Images to be collaged will be scaled down to 10% of thier size to save on space'),
                                     # get border
                                     html.P('Border options', className='input_line'),
                                     dcc.RadioItems(
@@ -91,7 +92,7 @@ layout = html.Div([
 
 
                                     # upload images
-                                    html.P('Upload images', className='input_line'),
+                                    html.P('Upload images (one at a time)', className='input_line'),
                                     html.Div(className='images_list'),
                                     html.Div(id='output-image-upload'),
                                     dcc.Upload(
@@ -123,6 +124,7 @@ layout = html.Div([
                             dbc.CardFooter(
                                 [
                                     dbc.Button('Create', color='success', id='b_create_collage'),
+                                    html.P('This may take a second'),
                                 ],
                             ),
                         ],

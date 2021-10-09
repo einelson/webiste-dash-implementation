@@ -83,4 +83,6 @@ def display_page(pathname):
         return not_found.layout
 
 if __name__ == '__main__':
-    app.run_server(debug=False)
+    app.run_server(debug=True)
+
+    # 4462359J3SYE

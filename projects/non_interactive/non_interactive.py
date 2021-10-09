@@ -1,10 +1,8 @@
 """
 Author: Ethan Nelson
 """
-import dash
-from dash import dcc, html
+from dash import  html
 import dash_bootstrap_components as dbc
-from dash.dependencies import Output, Input, State
 from app import app
 
 '''

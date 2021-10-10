@@ -83,6 +83,4 @@ def display_page(pathname):
         return not_found.layout
 
 if __name__ == '__main__':
-    server = app.server
-    server.secret_key = os.environ.get('secret_key', 'secret')
-    app.run(debug=False, port=8000)
+    app.run_server(debug=False, port=8000)

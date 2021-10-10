@@ -1,3 +1,4 @@
+from datetime import time
 from dash import dcc, html
 import dash_bootstrap_components as dbc
 from dash.dependencies import Output, Input, State
@@ -5,6 +6,10 @@ from app import app
 
 from projects.fault_detection.visualizations import Visuals
 
+import time
+
+time.sleep(10)
+print('loaded')
 graphs = Visuals(df=('.' + app.get_asset_url('data/fault_detection/fault_detection.csv')), num_clusters=8)
 
 time_series = graphs.time_series()
@@ -20,7 +25,6 @@ cluster.update_layout(paper_bgcolor = 'rgb(34, 34, 34)', font = {'color': "white
 LAYOUT
 '''
 layout = html.Div([
-    
     # about
     dbc.Row(
         [
@@ -97,4 +101,5 @@ layout = html.Div([
         ],style={'margin-top': '4em'},
     ),
 ], className='layout')
+
 

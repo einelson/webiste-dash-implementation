@@ -83,4 +83,5 @@ def display_page(pathname):
         return not_found.layout
 
 if __name__ == '__main__':
+    server = app.server
     app.run(debug=False, port=8000)

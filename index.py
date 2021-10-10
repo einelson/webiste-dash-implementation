@@ -1,4 +1,4 @@
-from dash.resources import Scripts
+import os
 from app import app
 from dash import dcc, html
 from dash.dependencies import Input, Output
@@ -84,4 +84,5 @@ def display_page(pathname):
 
 if __name__ == '__main__':
     server = app.server
+    server.secret_key = os.environ.get('secret_key', 'secret')
     app.run(debug=False, port=8000)

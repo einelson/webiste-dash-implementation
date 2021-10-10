@@ -1,5 +1,3 @@
-from datetime import time
-import dash
 from dash import dcc, html
 import dash_bootstrap_components as dbc
 from dash.dependencies import Output, Input, State

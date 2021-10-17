@@ -1,5 +1,5 @@
 # About
-This is my website but written in python-dash
+This is a copy of my current website but written in python-dash.
 
 Feel free to use this as a template for learning how to use dash.
 
